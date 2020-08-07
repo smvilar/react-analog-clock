@@ -22,7 +22,8 @@ const AnalogClock: FC<Props> = ({ initialTime = Date.now() }) => {
   const m = date.getMinutes();
   const s = date.getSeconds();
   const ms = date.getMilliseconds();
-  const secondsAngleWithMS = getSecondsAngle(s) + getSecondsAngle(1) * ms / 1000;
+  const secondsAngleWithMS =
+    getSecondsAngle(s) + (getSecondsAngle(1) * ms) / 1000;
 
   const viewBox = `0 0 ${diameter} ${diameter}`;
   const style = { height: '100%', overflow: 'visible' };
@@ -30,7 +31,12 @@ const AnalogClock: FC<Props> = ({ initialTime = Date.now() }) => {
   return (
     <svg viewBox={viewBox} style={style}>
       <g transform={`translate(${radius} ${radius})`}>
-        <circle r={radius} stroke="black" strokeWidth={0.5} fill="transparent" />
+        <circle
+          r={radius}
+          stroke="black"
+          strokeWidth={0.5}
+          fill="transparent"
+        />
         <Hand r={radius} width={2.5} length={0.7} angle={getHoursAngle(h)} />
         <Hand r={radius} width={2} length={0.9} angle={getMinutesAngle(m)} />
         <Hand r={radius} length={0.95} angle={secondsAngleWithMS} />
