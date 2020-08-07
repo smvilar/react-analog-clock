@@ -7,6 +7,7 @@ const Container = ({ children }) => (
 
 export default {
   title: 'Analog clock',
+  component: AnalogClock,
   decorators: [
     (storyFn: () => JSX.Element) => <Container>{storyFn()}</Container>,
   ],

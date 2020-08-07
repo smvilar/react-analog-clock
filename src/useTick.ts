@@ -12,9 +12,9 @@ const useTick = (initialTime: number, interval: number = 1000) => {
     return () => {
       clearTimeout(timeout);
     };
-  }, [time]);
+  }, [time, interval]);
 
   return time;
-}
+};
 
 export default useTick;
