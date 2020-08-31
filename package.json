@@ -34,7 +34,7 @@
   "module": "dist/react-analog-clock.esm.js",
   "devDependencies": {
     "@babel/core": "^7.11.4",
-    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-docs": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",
     "@storybook/addons": "^5.3.19",
