@@ -11,17 +11,12 @@
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
     "lint": "tsdx lint src stories test",
-    "prepare": "tsdx build",
+    "prepare": "husky install && tsdx build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "react": ">=16"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
   },
   "prettier": {
     "printWidth": 80,
@@ -43,7 +38,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "babel-loader": "^8.2.2",
-    "husky": "^4.3.7",
+    "husky": "^5.2.0",
     "react": "^16.14.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.14.0",
